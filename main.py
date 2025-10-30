@@ -3,6 +3,32 @@
 
 # %%
 #2.2 Euler's Totient and Theorem
+import math
+import random
+
+#beregner E-totient funksjon for n = p*q
+def eulers_totient(p,q):
+
+    return (p-1)*(q-1)
+
+#verifisering av E-teorem m^φ(n) ≡ 1 (mod n) når gcd(m, n) = 1
+def eulers_theorem_verification(m,n, phi):
+
+    if math.gcd(m,n) ==1:
+        resultat = pow(m, phi, n)
+        print(f"Eulers teorem: {m}^φ({n}) ≡ {m}^{phi} ≡ {resultat} (mod {n})")
+        return resultat == 1
+    else:
+        print(f"Eulers toerem gjelder ikke. Da m={m}, n={n} og gcd(m, n) ≠ 1")
+        return False
+
+#beregning av mod-invers v/e-teorem e*d =1 (mod φ(n))
+def modulo_invers(e, phi):
+
+
+
+
+
 
 
 # %%
